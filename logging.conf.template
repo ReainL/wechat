@@ -1,0 +1,32 @@
+# log configuration
+
+[loggers]
+keys = root
+
+[handlers]
+keys = console, file
+
+[formatters]
+keys = generic, simple
+
+[logger_root]
+level = DEBUG
+handlers = console, file
+
+[handler_console]
+class = StreamHandler
+args = (sys.stderr,)
+level = NOTSET
+formatter = generic
+
+[handler_file]
+class = handlers.TimedRotatingFileHandler
+args = ('/home/xsl/log/morningdata.log', 'midnight', )
+level = DEBUG
+formatter = generic
+
+[formatter_generic]
+format = %(asctime)s %(levelname)-5.5s [%(name)s:%(lineno)s][%(threadName)s] %(message)s
+
+[formatter_simple]
+format = %(asctime)s %(levelname)-5.5s %(message)s
