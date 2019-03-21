@@ -5,10 +5,10 @@
 
 |    程序   | 备注 |技术栈|
 |:-------------:|:-------------:|:-----:|
-| [微信好友性别占比](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_friend.py)|采集微信好友性别比例并绘制饼图|itchat, matplotlib|
-| [微信好友头像](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_photo.py)|采集微信好友头像并拼接大图|itchat, math, PIL|
-| [微信好友地区分布](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_area.py)|采集微信好友区域分布并分别制作省会和城市Top10柱形图 |itchat, matplotlib|
-| [微信好友个性签名情感分析](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_sign.py)|采集微信性别比例并绘制饼图|itchat, matplotlib, jieba, numpy, snownlp, wordcloud|
+| [微信好友性别占比](https://github.com/ReainL/wechat#2微信好友性别占比)|采集微信好友性别比例并绘制饼图|itchat, matplotlib|
+| [微信好友头像](https://github.com/ReainL/wechat#3微信好友头像)|采集微信好友头像并拼接大图|itchat, math, PIL|
+| [微信好友地区分布](https://github.com/ReainL/wechat#4微信好友地区分布)|采集微信好友区域分布并分别制作省会和城市Top10柱形图 |itchat, matplotlib|
+| [微信好友个性签名情感分析](https://github.com/ReainL/wechat#5微信好友个性签名情感分析)|采集微信性别比例并绘制饼图|itchat, matplotlib, jieba, numpy, snownlp, wordcloud|
 
 
 #### [1、微信登录](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_login.py)
