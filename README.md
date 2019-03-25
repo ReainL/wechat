@@ -35,7 +35,7 @@ we_friend = itchat.get_friends(update=True)[:]
 |Signature|个性签名|
 
 #### [2、微信好友性别占比](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_friend.py)
-通过统计好友人数、男生女神各多少人算出好友性别占比，再绘制饼图。
+通过统计好友人数、男生女生各多少人算出好友性别占比，再绘制饼图。
 
 ![](https://github.com/ReainL/wechat/blob/master/res/%E5%BE%AE%E4%BF%A1%E5%A5%BD%E5%8F%8B%E6%80%A7%E5%88%AB%E6%AF%94%E4%BE%8B.png?raw=true)
 
