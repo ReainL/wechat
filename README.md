@@ -9,6 +9,7 @@
 | [微信好友头像](https://github.com/ReainL/wechat#3微信好友头像)|采集微信好友头像并拼接大图|itchat, math, PIL|
 | [微信好友地区分布](https://github.com/ReainL/wechat#4微信好友地区分布)|采集微信好友区域分布并分别制作省会和城市Top10柱形图 |itchat, matplotlib|
 | [微信好友个性签名情感分析](https://github.com/ReainL/wechat#5微信好友个性签名情感分析)|采集微信性别比例并绘制饼图|itchat, matplotlib, jieba, numpy, snownlp, wordcloud|
+| [微信群好友统计](https://github.com/ReainL/wechat#6微信群好友统计)|采集微信群好友信息|itchat, matplotlib, PIL|
 
 
 #### [1、微信登录](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_login.py)
@@ -45,7 +46,7 @@ we_friend = itchat.get_friends(update=True)[:]
 
 - 设定最后拼图的大小，以及每行需要拼接几个头像，这里我采用图片的面积除以图片的张数
 
-```buildoutcfg
+```python
 each_size = int(math.sqrt(float(640 * 640) / len(ls)))  # 算出每张图片的大小多少合适
 lines = int(640 / each_size)
 image = Image.new('RGBA', (640, 640))   # 创建640*640px的大图
@@ -82,6 +83,25 @@ image = Image.new('RGBA', (640, 640))   # 创建640*640px的大图
 
 通过饼图来推测我的好友大多数正向情感要高于负向情感。
 
+#### [6、微信群好友统计](https://github.com/ReainL/wechat/blob/master/pro_script/wechat_group.py)
+
+之前加了一个中产互助社群，群成员既有一线京沪广深、二线杭宁苏夏，成渝武郑，也有四五七八线地级市县以及国外的朋友，群里刚好讨论了一个话题《三到五年后离开北上广的有多少打算的》，借此机会统计下目前有多少在一线工作，3年后会再次统计一波
+
+群聊用户列表的获取方法为`update_chatroom`。
+
+- 同样，如果想要更新该群聊的其他信息也可以用该方法
+- 群聊在首次获取中不会获取群聊的用户列表，所以需要调用该命令才能获取群聊的成员
+- 该方法需要传入群聊的UserName，返回特定群聊的详细信息
+- 同样也可以传入UserName组成的列表，那么相应的也会返回指定用户的最新信息组成的列表
+```python
+import itchat
+memberList = itchat.update_chatroom('@@abcdefg1234567', detailedMember=True)
+```
+
+![中产之路2群(新)好友性别比例](https://upload-images.jianshu.io/upload_images/6078268-58bc4785af47ad5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![中产之路2群(新)群好友人数Top20](https://upload-images.jianshu.io/upload_images/6078268-3b6267fba80fc133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+性别比例这里就不再提，群内好友人数分布从图片中可以清晰看到Top3是北京、上海、深圳，的确如此。对于普通人来说，大城市发展的机会、空间、市场、机遇、机会都会比小城市大的多。
 
 ###### 最后, 想一块合作做更多有趣好玩的项目,欢迎关注公众号：
 
