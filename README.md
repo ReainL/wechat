@@ -98,7 +98,7 @@ import itchat
 memberList = itchat.update_chatroom('@@abcdefg1234567', detailedMember=True)
 ```
 
-![中产之路2群(新)好友性别比例](https://upload-images.jianshu.io/upload_images/6078268-58bc4785af47ad5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![中产之路2群(新)好友性别比例](https://upload-images.jianshu.io/upload_images/6078268-10e924e8cc04ab6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![中产之路2群(新)群好友人数Top20](https://upload-images.jianshu.io/upload_images/6078268-3b6267fba80fc133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 性别比例这里就不再提，群内好友人数分布从图片中可以清晰看到Top3是北京、上海、深圳，的确如此。对于普通人来说，大城市发展的机会、空间、市场、机遇、机会都会比小城市大的多。

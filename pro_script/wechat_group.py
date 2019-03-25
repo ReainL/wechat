@@ -37,7 +37,6 @@ def grp_sex_ratio(grp_nm, ):
     plt.rcParams['font.sans-serif'] = ['SimHei']    # 用来正常显示中文标签
     plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
     plt.figure(figsize=(5, 5))  # 绘制的图片为正圆
-    sex_li = ['男', '女', '其他']
     radius = [0.01, 0.01, 0.01]  # 设定各项距离圆心n个半径
     colors = ['red', 'yellowgreen', 'lightskyblue']
     logger.debug('proportion:%s' % proportion)
